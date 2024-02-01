@@ -22,7 +22,7 @@ router = APIRouter()
 @router.post("/",response_description="Lot data added into the database")
 async def add_lot_data(lot:LotSchema= Body(...)):
     lot=jsonable_encoder(lot)
-    new_lot=await add_lot_(lot)
+    new_lot=await add_lot(lot)
     return ResponseModel(new_lot,"Lot added successfully")
 
 @router.get("/",response_description="Lot retrieved")
@@ -40,7 +40,7 @@ async def get_lots_data(id):
     return ErrorResponseModel("Error occurred",404,"Lot doesnot exist")
 
 @router.put("/{id}")
-async def update_lot_data(id:str,req:UpdateLotSchema-Body(...)):
+async def update_lot_data(id:str,req:UpdateLotSchema= Body(...)):
     req={k: v for k, v in req.dict().items() if v is not None}
     updated_lot = await update_lot(id, req)
     if updated_lot:
@@ -63,3 +63,4 @@ async def delete_lot_data(id: str):
     return ErrorResponseModel(
         "An error occurred", 404, "Lot with id {0} doesn't exist".format(id)
     )
+
