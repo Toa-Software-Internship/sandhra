@@ -5,7 +5,7 @@ from pydantic import BaseModel,Field
 #Creation of Initial Data Collection
 class DataSchema(BaseModel):
     date: datetime
-    lot_id:int
+    lot_id:str
     workdone:str
     yield_obtained:int
     
@@ -22,7 +22,7 @@ class DataSchema(BaseModel):
 #Updation DataSchema for Put Operation
 class UpdateDataSchema(BaseModel):
     date:Optional[datetime]
-    lot_id:Optional[int]
+    lot_id:Optional[str]
     workdone:Optional[str]
     yield_obtained:Optional[int]
 
