@@ -1,5 +1,7 @@
 from bson.objectid import ObjectId
 
+
+
 # Retrieve all lots present in the database
 async def retrieve_lots():
     lots = []
