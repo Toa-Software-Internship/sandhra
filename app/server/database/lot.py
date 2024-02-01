@@ -22,8 +22,7 @@ def lot_helper(lot) -> dict:
         "created_at":lot["created_at"],
         "created_by":lot["created_by"],
         "updated_at":lot["updated_at"],
-        "updated_by":lot["updated_by"]
-        
+        "updated_by":lot["updated_by"]   
     }
 
 # Retrieve all lots present in the database
