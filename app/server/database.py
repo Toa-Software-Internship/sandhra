@@ -19,23 +19,3 @@ async def delete_lot(id: str):
     if lot:
         await lot_collection.delete_one({"_id": ObjectId(id)})
         return True
-    
-#Add a new lot 
-async def add_lot(lot_data:dict)->dict:
-    lot=await lot_collection.insert_one(lot_data)
-    new_lot=await lot_collection.find_one({"_id": lot.inserted_id})
-    return lot_helper(lot)
-
-#Updation of lot with matching ID
-async def update_lot(id:str,data:dict):
-    #Return false if empty requestbody is sent
-    if len(data)<1:
-        return False
-    lot=await lot_collection.find_one({"_id": ObjectId(id)})
-    if lot:
-        update_lot= await lot_collection.update_one(
-            {"_id": ObjectId(id)}, {"$set": data}
-        )
-        if update_lot:
-            return True
-        return False
