@@ -19,7 +19,7 @@ class LotSchema(BaseModel):
             "example":{
                 "name":"Bijoy",
                 "block": "42",
-                "status":"active",
+                "status":"harvesting",
                 "active":"1",
                 "created_at":"2022-12-27 08:26:49.219717",
                 "created_by":"admin",
@@ -43,7 +43,7 @@ class UpdateLotSchema(BaseModel):
             "example":{
                 "name":"Bijoy",
                 "block" : "43",
-                "status":"active",
+                "status":"watering",
                 "active":"1",
                 "created_at":"2022-12-27 08:26:49.219717",
                 "created_by":"admin",
