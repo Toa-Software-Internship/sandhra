@@ -3,18 +3,18 @@ from bson.objectid import ObjectId
 #Defining connection details
 import motor.motor_asyncio
 
-MONGO_DETAILS = "mongodb://localhost:27017"
+MONGO_DETAILS = "mongodb://0.0.0.0:27017/"
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
-database = client.students
+database = client.farm
 
 lot_collection = database.get_collection("lots_collection")
 
 #Helper function for parsing 
 def lot_helper(lot) -> dict:
     return {
-        "id": str(lot["_id"]),,
+        "id": str(lot["_id"]),
         "name":lot["name"],
         "block" :lot["block"],
         "status":lot["status"],
@@ -65,3 +65,4 @@ async def update_lot(id:str,data:dict):
         if update_lot:
             return True
         return False
+    

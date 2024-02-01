@@ -38,3 +38,28 @@ async def get_lots_data(id):
     if lot:
         return ResponseModel(lot,"Lot data retrieved")
     return ErrorResponseModel("Error occurred",404,"Lot doesnot exist")
+
+@router.put("/{id}")
+async def update_lot_data(id:str,req:UpdateLotSchema-Body(...)):
+    req={k: v for k, v in req.dict().items() if v is not None}
+    updated_lot = await update_lot(id, req)
+    if updated_lot:
+        return ResponseModel(
+            "Lot with ID: {} name update is successful".format(id),
+            "Lot name updated successfully",
+        )
+    return ErrorResponseModel(
+        "An error occurred",
+        404,
+        "There was an error updating the lot data.",
+    )
+@router.delete("/{id}", response_description="Lot data deleted from the database")
+async def delete_lot_data(id: str):
+    deleted_lot = await delete_lot(id)
+    if deleted_lot:
+        return ResponseModel(
+            "Lot with ID: {} removed".format(id), "Lot deleted successfully"
+        )
+    return ErrorResponseModel(
+        "An error occurred", 404, "Lot with id {0} doesn't exist".format(id)
+    )
