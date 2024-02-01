@@ -1,6 +1,30 @@
 from bson.objectid import ObjectId
 
+#Defining connection details
+import motor.motor_asyncio
 
+MONGO_DETAILS = "mongodb://localhost:27017"
+
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
+
+database = client.students
+
+lot_collection = database.get_collection("lots_collection")
+
+#Helper function for parsing 
+def lot_helper(lot) -> dict:
+    return {
+        "id": str(lot["_id"]),,
+        "name":lot["name"],
+        "block" :lot["block"],
+        "status":lot["status"],
+        "active":lot["active"],
+        "created_at":lot["created_at"],
+        "created_by":lot["created_by"],
+        "updated_at":lot["updated_at"],
+        "updated_by":lot["updated_by"]
+        
+    }
 
 # Retrieve all lots present in the database
 async def retrieve_lots():
