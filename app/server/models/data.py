@@ -15,7 +15,7 @@ class DataSchema(BaseModel):
                 "date":"2022-12-27 08:26:49.219717",
                 "lot_id":"2030",
                 "workdone":"harvesting",
-                "yield_obtained":"50000",
+                "yield_obtained":50000,
                 
             }
         }
