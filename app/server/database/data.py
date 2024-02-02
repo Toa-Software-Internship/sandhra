@@ -15,7 +15,7 @@ data_collection = database.get_collection("datas_collection")
 def data_helper(data) -> dict:
     return {
         "date": data["date"],
-        "lot_id": str(["lot_id"]),
+        "lot_id": data["lot_id"],
         "workdone":data["workdone"],
         "yield_obtained" :data["yield_obtained"]
     }
