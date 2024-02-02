@@ -60,3 +60,10 @@ async def update_data(id:str,data:dict):
             return True
         return False
     
+#retrieve for all find all according to the ID
+async def retrieve_datas(lot_id:str)->dict:
+    datas = []
+    async for data in data_collection.find({"lot_id": lot_id}):
+        datas.append(data_helper(data))
+    return datas
+    

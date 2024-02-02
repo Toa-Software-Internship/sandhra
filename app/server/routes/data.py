@@ -65,3 +65,12 @@ async def delete_data_data(id: str):
     return ErrorResponseModel(
         "An error occurred", 404, "Data with id {0} doesn't exist".format(id)
     )
+
+
+
+@router.get("/lotdata/{lot_id}", response_description="Lot Data retrieved")
+async def get_datas_data(lot_id):
+    data=await retrieve_datas(lot_id)
+    if data:
+        return ResponseModel(data,"Data retrieved")
+    return ErrorResponseModel("Error occurred",404,"Doesnot exist")
