@@ -2,6 +2,7 @@ from fastapi import APIRouter,Body
 from fastapi.encoders import jsonable_encoder
 
 #Call functions needed to the router
+
 from server.database.data import (
     add_data,
     delete_data,
@@ -9,6 +10,7 @@ from server.database.data import (
     retrieve_data,
     update_data,
 )
+
 from server.models.data import (
     ErrorResponseModel,
     ResponseModel,
