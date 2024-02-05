@@ -14,7 +14,7 @@ function App() {
       <div className='bar'>
       
       <Dropdown/>
-      <Button/>
+      <Button className="submit-button" text="SUBMIT"/>
 
       </div>
       <Heading className="big-heading"></Heading>

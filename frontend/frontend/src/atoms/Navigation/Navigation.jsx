@@ -3,16 +3,16 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Heading from '../Heading/Heading';
 import SmallHead from '../SmallHead/SmallHead';
-
-
+import Button from '../button/Button';
+import "./Navigation.css"
+const pages = ['HOME', 'CONTACT'];
 const Navigation = (Navigationbar) => {
-  return (
-    <div className=''>Navigation</div>
-  )
-}
+    return (
+      <div >Navigation</div>
+    )
+  }
 
 export default function Navigationbar(){
     return(
@@ -22,11 +22,14 @@ export default function Navigationbar(){
                     
                         
                         <Typography variant="h6" component="div" style={{lineHeight:"50px"}}>
+                                                    
                             <Heading className="small-heading"/>
                             <SmallHead className="s-heading"/>
                         </Typography>
-                        {/* <Button color="inherit">HOME</Button> */}
-                    
+                        <div className='home-contact'> 
+                            <Button className='home-button' text="HOME"></Button> 
+                            <Button className='home-button' text="CONTACT"></Button>
+                        </div>                    
 
                 </Toolbar>
             </AppBar>

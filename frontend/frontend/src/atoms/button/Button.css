@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-.button-style{
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
+.submit-button{
     color: #BACD9B;
     background-color: #3A483E;
     border-radius: 10px;
@@ -7,7 +9,18 @@
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     letter-spacing: 3;
-    font-weight: bold;
-    
+    font-weight: bold; 
+    cursor: pointer;
+
+}
+.home-button{
+    cursor: pointer;
+    color:#FFFFFF;
+    background-color: transparent;
+    font-size: 20px;
+    font-family: 'Metrophobic', sans-serif;
+    font-weight:normal;
+    background-color:  "#2A4704";
+    border: 0cm;
 
 }
