@@ -18,7 +18,7 @@ function App() {
 
       </div>
       <Heading className="big-heading"></Heading>
-      <Heading className="small-heading"/>
+      
       <SmallHead className= "b-heading"/>
       
       <Descr/>
