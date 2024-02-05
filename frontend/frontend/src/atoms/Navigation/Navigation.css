@@ -3,5 +3,7 @@
 }
 .navbar-style{
     display:flex;
+    align-items: center;
     justify-content:end;
+    position: static;
 }
