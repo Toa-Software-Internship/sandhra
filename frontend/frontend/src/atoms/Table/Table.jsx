@@ -20,21 +20,20 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper} >
-      <Table sx={{ minWidth: 650 }} aria-label="simple table" >
+    <TableContainer component={Paper}  >
+      <Table  aria-label="simple table" >
         <TableHead>
           <TableRow >
             <TableCell className='heading'>DATE </TableCell>
             <TableCell className='heading'>YIELD RECEIVED(gms)</TableCell>
             <TableCell className='heading'>WORKTYPE&nbsp;</TableCell>
-        
           </TableRow>
         </TableHead>
         <TableBody  className='heading' >
           {rows.map((row) => (
             <TableRow  className='heading'
               key={row.date}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              
             >
               <TableCell component="th" scope="row" className='heading'>
                 {row.date}

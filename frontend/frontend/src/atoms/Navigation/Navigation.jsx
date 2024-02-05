@@ -25,6 +25,9 @@ export default function Navigationbar(){
                                 <Heading className="small-heading"/>
                                 <SmallHead className="s-heading"/>
                         </div>
+                        <div className='navbar-space'>
+
+                        </div>
                         
                         <div className='navbar-buttons'> 
                             <Button className='home-button' text="HOME"></Button> 

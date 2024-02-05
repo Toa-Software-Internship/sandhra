@@ -1,5 +1,10 @@
-.App {
+body{
+  
+
+}
+.main {
   text-align: center;
+  background-color: rgb(244, 244, 225);
 }
 
 .App-logo {
@@ -41,3 +46,7 @@
   justify-content: center;
 }
 
+.table-size{
+  width: 50%;
+  padding: 20px;
+}

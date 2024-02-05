@@ -10,22 +10,21 @@ import BasicTable from './atoms/Table/Table';
 
 function App() {
   return (
-    <div className="App">
+    <div className="main">
 
       <Navigation />
       <Image/>
-        
-      
-
       <Heading className="big-heading"></Heading>
       <SmallHead className= "b-heading"/>
       <div className='bar'>
       
-      <Dropdown/>
-      <Button className="submit-button" text="SUBMIT"/>
+        <Dropdown/>
+        <Button className="submit-button" text="SUBMIT"/>
 
       </div>
-      <BasicTable/>
+      <div className='table-size'>
+        <BasicTable/>
+      </div>
   
     </div>
   );
