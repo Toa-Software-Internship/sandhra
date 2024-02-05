@@ -5,6 +5,7 @@ import Button from './atoms/button/Button';
 import Descr from './atoms/descr/Descr';
 import Dropdown from './atoms/dropdown/Dropdown';
 import Image from './atoms/Images/Image';
+import Navigation from './atoms/Navigation/Navigation';
 
 
 function App() {
@@ -19,9 +20,12 @@ function App() {
       <Heading className="big-heading"></Heading>
       <Heading className="small-heading"/>
       <SmallHead className= "b-heading"/>
-      <SmallHead className="s-heading"/>
+      
       <Descr/>
       <Image/>
+      <Navigation />
+      
+
     
 
 
