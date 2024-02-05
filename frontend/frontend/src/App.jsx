@@ -4,6 +4,7 @@ import SmallHead from './atoms/SmallHead/SmallHead';
 import Button from './atoms/button/Button';
 import Descr from './atoms/descr/Descr';
 import Dropdown from './atoms/dropdown/Dropdown';
+import Image from './atoms/Images/Image';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <SmallHead className= "b-heading"/>
       <SmallHead className="s-heading"/>
       <Descr/>
+      <Image/>
     
 
 
