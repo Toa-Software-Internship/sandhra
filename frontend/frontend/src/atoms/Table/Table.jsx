@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./Table.css"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,34 +13,34 @@ function createData(date, Yield, work) {
 }
 
 const rows = [
-  createData('2024-01-29', 1000,'Harvesting'),
-  createData('2024-01-30 ', 3000,'Watering'),
-  createData('2024-01-31', 1800, 'Harvesting'),
+  createData('2024-01-29', '1000','Harvesting'),
+  createData('2024-01-30 ', '3000','Watering'),
+  createData('2024-01-31', '1800', 'Harvesting'),
 ];
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} >
+      <Table sx={{ minWidth: 650 }} aria-label="simple table" >
         <TableHead>
-          <TableRow>
-            <TableCell>DATE </TableCell>
-            <TableCell align="right">YIELD RECEIVED(gms)</TableCell>
-            <TableCell align="right">WORKTYPE&nbsp;</TableCell>
+          <TableRow >
+            <TableCell className='heading'>DATE </TableCell>
+            <TableCell className='heading'>YIELD RECEIVED(gms)</TableCell>
+            <TableCell className='heading'>WORKTYPE&nbsp;</TableCell>
         
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody  className='heading' >
           {rows.map((row) => (
-            <TableRow
+            <TableRow  className='heading'
               key={row.date}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" className='heading'>
                 {row.date}
               </TableCell>
-              <TableCell align="right">{row.yield}</TableCell>
-              <TableCell align="right">{row.work}</TableCell>
+              <TableCell  className='heading'>{row.Yield}</TableCell>
+              <TableCell  className='heading'>{row.work}</TableCell>
             
             </TableRow>
           ))}

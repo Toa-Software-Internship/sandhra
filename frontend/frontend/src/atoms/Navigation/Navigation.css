@@ -1,12 +1,14 @@
-.home-contact {
+.navbar-buttons {
     display: flex;
-    text-align: right;
-    justify-content: flex-end;
+    margin-left: 500px;
 }
 .navbar-style{
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content:space-between;
-    position: static;
+    justify-content: space-between;
+    
+   }
+
+.navbar-heading{
     
 }

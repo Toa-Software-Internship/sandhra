@@ -18,18 +18,18 @@ export default function Navigationbar(){
     return(
         <Box >
             <AppBar position="static" >
-                <Toolbar sx={{flexGrow:1, backgroundColor: "#2A4704"}}>
+                <Toolbar sx={{backgroundColor: "#2A4704"}}>
                     
                     <div className='navbar-style'>
-                    <Typography variant="h6" component="div" style={{lineHeight:"50px"}}>                     
-                            <Heading className="small-heading"/>
-                            <SmallHead className="s-heading"/>
-                    </Typography>
-                    
-                    <div className='home-contact'> 
-                         <Button className='home-button' text="HOME"></Button> 
-                         <Button className='home-button' text="CONTACT"></Button>
-                    </div>
+                        <div className='navbar-heading'>
+                                <Heading className="small-heading"/>
+                                <SmallHead className="s-heading"/>
+                        </div>
+                        
+                        <div className='navbar-buttons'> 
+                            <Button className='home-button' text="HOME"></Button> 
+                            <Button className='home-button' text="CONTACT"></Button>
+                        </div>
                     </div>         
                 </Toolbar>
             </AppBar>
