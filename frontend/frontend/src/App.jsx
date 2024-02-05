@@ -13,7 +13,8 @@ function App() {
       <Button/>
 
       </div>
-      <Heading></Heading>
+      <Heading className="big-heading"></Heading>
+      <Heading className="small-heading"/>
 
 
 
