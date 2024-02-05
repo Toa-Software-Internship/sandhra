@@ -1,5 +1,6 @@
 import './App.css';
 import Heading from './atoms/Heading/Heading';
+import SmallHead from './atoms/SmallHead/SmallHead';
 import Button from './atoms/button/Button';
 import Dropdown from './atoms/dropdown/Dropdown';
 
@@ -15,6 +16,8 @@ function App() {
       </div>
       <Heading className="big-heading"></Heading>
       <Heading className="small-heading"/>
+      <SmallHead className= "b-heading"/>
+      <SmallHead className="s-heading"/>
 
 
 
