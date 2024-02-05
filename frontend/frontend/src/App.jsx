@@ -11,9 +11,12 @@ import BasicTable from './atoms/Table/Table';
 function App() {
   return (
     <div className="App">
+
       <Navigation />
       <Image/>
-      <Descr/>
+        
+      
+
       <Heading className="big-heading"></Heading>
       <SmallHead className= "b-heading"/>
       <div className='bar'>

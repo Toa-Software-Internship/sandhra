@@ -1,9 +1,12 @@
 .home-contact {
     display: flex;
+    text-align: right;
+    justify-content: flex-end;
 }
 .navbar-style{
     display:flex;
     align-items: center;
-    justify-content:end;
+    justify-content:space-between;
     position: static;
+    
 }

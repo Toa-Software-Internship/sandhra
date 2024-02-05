@@ -38,4 +38,10 @@
 }
 .bar{
   display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  width: 100%;
+  border: 2px red;
 }
+

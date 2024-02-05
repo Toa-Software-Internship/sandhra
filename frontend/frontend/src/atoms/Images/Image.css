@@ -1,15 +1,5 @@
-.left-image{
-    width: 25px;
-    height:40px;
+.dashboard-style{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     
-
-}
-.right-image{
-    width:20px;
-    height:40px;
-    display: flex;
-    justify-content: right;
-
 }
