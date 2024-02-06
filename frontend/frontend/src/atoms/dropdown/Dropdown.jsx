@@ -8,7 +8,11 @@ import FormControl from '@mui/material/FormControl';
 
 
 
-const Dropdown = () => {
+const Dropdown = (options) => {
+  //
+  console.log(options.options)
+
+
   return (
     <div>
       <Box sx={{borderBottom:0}}>
@@ -24,7 +28,14 @@ const Dropdown = () => {
         
         label="SELECT FIELD/LOT"
         >
-            
+          {
+          options.options.map((item=>
+            <MenuItem key={item.id} value={item.name}>
+              {item.name}
+            </MenuItem>))
+        
+        }
+                
         </Select>
         </FormControl>
         </Box>

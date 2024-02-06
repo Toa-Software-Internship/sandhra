@@ -13,24 +13,27 @@ import BottomNavigation from './atoms/BottomNavigation/BottomNavigation';
 function App() {
   const [lotOptions,setLotOptions] = useState([]);
 
-  // useEffect(()=>{
-  //   axios
-  //   .get("http://localhost:8000/lot/")
-  //   .then((response)=>{
-  //     console.log(response.data.data);
-  //     setLotOptions(response.data.data)
-  //   })
-  // })
-
-useEffect(()=>{
-  axios
-  .get("http://localhost:8000/lot/65bb48d6961c0a1f3a5e170e")
-  .then((response)=>{
-    console.log(response.data.data);
-    setLotOptions(response.data.data)
+//For Lots
+  useEffect(()=>{
+    axios
+    .get("http://localhost:8000/lot/")
+    .then((response)=>{
+      setLotOptions(response.data.data[0])
+      console.log(lotOptions);
+    })
   })
+
+
+//Just for checking how get works when a particular LotID is given 
+// useEffect(()=>{
+//   axios
+//   .get("http://localhost:8000/lot/65bb48d6961c0a1f3a5e170e")
+//   .then((response)=>{
+//     console.log(response.data.data);
+//     setLotOptions(response.data.data)
+//   })
   
-})
+// })
 
   const handleSubmit =(e)=>{
     e.preventDefault();
@@ -45,7 +48,7 @@ useEffect(()=>{
       <SmallHead className= "b-heading"/>
       <div className='bar'>
       
-        <Dropdown/>
+        <Dropdown options={lotOptions}/>
         <Button className="submit-button" text="SUBMIT" handleChange={handleSubmit}/>
 
       </div>
