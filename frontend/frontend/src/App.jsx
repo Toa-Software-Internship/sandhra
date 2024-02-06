@@ -7,6 +7,7 @@ import Dropdown from './atoms/dropdown/Dropdown';
 import Image from './atoms/Images/Image';
 import Navigation from './atoms/Navigation/Navigation';
 import BasicTable from './atoms/Table/Table';
+import BottomNavigation from './atoms/BottomNavigation/BottomNavigation';
 
 function App() {
   return (
@@ -23,8 +24,13 @@ function App() {
 
       </div>
       <div className='table-size'>
+        <center>
         <BasicTable/>
+
+        </center>
+        
       </div>
+      <BottomNavigation/>
   
     </div>
   );

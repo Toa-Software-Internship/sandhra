@@ -47,6 +47,7 @@ body{
 }
 
 .table-size{
-  width: 50%;
-  padding: 20px;
+  
+  padding: 50px;
+  background-color: "#F4F4E1";
 }

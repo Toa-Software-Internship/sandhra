@@ -1,6 +1,9 @@
 .heading{
-    color:"#2A4704";
+    color: rgb(42, 71, 4);
+    font-weight: bold;
+
     border: 2px solid rgb(0, 0, 0);
+    background-color:rgb(244, 244, 225) ;
 
 }
 .border{

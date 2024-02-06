@@ -24,22 +24,23 @@ export default function BasicTable() {
       <Table  aria-label="simple table" >
         <TableHead>
           <TableRow >
-            <TableCell className='heading'>DATE </TableCell>
-            <TableCell className='heading'>YIELD RECEIVED(gms)</TableCell>
-            <TableCell className='heading'>WORKTYPE&nbsp;</TableCell>
+            <TableCell className='heading' sx={{color:"rgb(42, 71, 4)" , fontWeight:"bold", fontSize:"30px"} }>DATE </TableCell>
+    
+            <TableCell className='heading' sx={{color:"rgb(42, 71, 4)" , fontWeight:"bold", fontSize:"30px"} }>YIELD RECEIVED(gms)</TableCell>
+            <TableCell className='heading'sx={{color:"rgb(42, 71, 4)" , fontWeight:"bold", fontSize:"30px"} }>WORKTYPE&nbsp;</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody  className='heading' >
+        <TableBody  className='heading' sx={{ fontWeight:"bold"} } >
           {rows.map((row) => (
-            <TableRow  className='heading'
+            <TableRow  className='heading' sx={{ fontWeight:"bold"} }
               key={row.date}
               
             >
-              <TableCell component="th" scope="row" className='heading'>
+              <TableCell component="th" scope="row" className='heading'  sx={{ fontWeight:"bold",fontSize:"20px"} }>
                 {row.date}
               </TableCell>
-              <TableCell  className='heading'>{row.Yield}</TableCell>
-              <TableCell  className='heading'>{row.work}</TableCell>
+              <TableCell  className='heading'  sx={{ fontWeight:"bold", fontSize:"20px"} }>{row.Yield}</TableCell>
+              <TableCell  className='heading'  sx={{ fontWeight:"bold",fontSize:"20px"} }>{row.work}</TableCell>
             
             </TableRow>
           ))}
