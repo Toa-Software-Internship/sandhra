@@ -1,0 +1,15 @@
+.navbar-buttons {
+    display: flex;
+    margin-left: 500px;
+}
+.navbar-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   }
+
+.navbar-space{
+    width: 300px;
+    
+}
