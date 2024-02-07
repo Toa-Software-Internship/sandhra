@@ -4,7 +4,10 @@ import "./Button.css"
 const Button = (props) => {
   return (
     <div>
-      <button className={props.className} onClick={props.handleChange}>{props.text}</button>
+      <button
+       className={props.className} onClick={props.handleSubmit}>{props.text}
+
+      </button>
     </div>
   )
 }

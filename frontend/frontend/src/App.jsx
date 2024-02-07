@@ -50,32 +50,20 @@ function App() {
 
   }
 
-
-  // const handleSubmit =(e)=>{
-  //   e.preventDefault();
-  //   console.log("ButtonClicked");
-  //   console.log(selectedLot.id)
-  //   axios
-  //   .get(`http://localhost:8000/data/lotdata/${selectedLot.id}/`)
-  //   .then((response)=>{
-  //     setData(response.data)@
-  //     console.log(data);
-  //   })
-  // }
-
-
   const handleButtonClick=(e) =>{
     e.preventDefault();
     axios
     .get(`http://localhost:8000/data/lotdata/${selectedLot}/`)
     .then((response)=>{
-      setData(response.data)
+      //since we have to get in to find the array having which all components
+      const lotData=response.data.data[0];
+      // console.log(lotData)
+      //inorder to set the data retrieved into data
+      setData(lotData)
+      console.log(data)
 
     })
-    // // console.log(e.target.key)
-    // setSelectedLot({
-    //   id:e.target.key
-    // });
+    
   }
 
   return (
@@ -95,7 +83,8 @@ function App() {
         <Button 
         className="submit-button" 
         text="SUBMIT" 
-        handleSubmit={handleButtonClick}/>
+        handleSubmit={handleButtonClick}
+        />
 
       </div>
       <div className='table-size'>
