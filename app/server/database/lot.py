@@ -49,7 +49,7 @@ async def delete_lot(id: str):
 async def add_lot(lot_data:dict)->dict:
     lot=await lot_collection.insert_one(lot_data)
     new_lot=await lot_collection.find_one({"_id": lot.inserted_id})
-    return lot_helper(lot)
+    return lot_helper(new_lot)
 
 #Updation of lot with matching ID
 async def update_lot(id:str,data:dict):
