@@ -36,7 +36,7 @@ function App() {
       //console.log(lotOptions);
     })
     .catch(error => console.error("The error is:",error))
-  })
+  },[])
 
 
 
@@ -44,6 +44,11 @@ function App() {
   useEffect(()=>{
     
   })
+  //
+  const handleLotChange=(selectedValue)=>{
+    setSelectedLot(selectedValue)
+
+  }
 
 
   const handleSubmit =(e)=>{
@@ -76,8 +81,9 @@ function App() {
       <SmallHead className= "b-heading"/>
       <div className='bar'>
       
-        <Dropdown 
-        handleChange={handChange}
+        <Dropdown
+        lotvalue= {selectedLot}
+        onChange={handleLotChange}
         options={lotOptions}
         />
         <Button className="submit-button" text="SUBMIT" handleChange={handleSubmit}/>
