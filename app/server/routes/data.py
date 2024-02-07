@@ -9,6 +9,7 @@ from server.database.data import (
     retrieve_datas,
     retrieve_data,
     update_data,
+    retrieve_datasbylot
 )
 
 from server.models.data import (
@@ -70,7 +71,7 @@ async def delete_data_data(id: str):
 
 @router.get("/lotdata/{lot_id}", response_description="Lot Data retrieved")
 async def get_datas_data(lot_id):
-    data=await retrieve_datas(lot_id)
+    data=await retrieve_datasbylot(lot_id)
     if data:
         return ResponseModel(data,"Data retrieved")
     return ErrorResponseModel("Error occurred",404,"Doesnot exist")

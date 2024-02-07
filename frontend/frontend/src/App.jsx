@@ -38,16 +38,8 @@ function App() {
     .catch(error => console.error("The error is:",error))
   },[])
 
-
-
-  // for data retrieval
-  useEffect(()=>{
-    
-  })
-  //
   const handleLotChange=(selectedValue)=>{
     setSelectedLot(selectedValue)
-
   }
 
   const handleButtonClick=(e) =>{

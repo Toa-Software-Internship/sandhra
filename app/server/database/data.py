@@ -44,7 +44,7 @@ async def delete_data(id: str):
 async def add_data(data_data:dict)->dict:
     data=await data_collection.insert_one(data_data)
     new_data=await data_collection.find_one({"_id": data.inserted_id})
-    return data_helper(data)
+    return data_helper(new_data)
 
 #Updation of data with matching ID
 async def update_data(id:str,data:dict):
@@ -61,7 +61,7 @@ async def update_data(id:str,data:dict):
         return False
     
 #retrieve for all find all according to the ID
-async def retrieve_datas(lot_id:str)->dict:
+async def retrieve_datasbylot(lot_id:str)->dict:
     datas = []
     async for data in data_collection.find({"lot_id": lot_id}):
         datas.append(data_helper(data))
