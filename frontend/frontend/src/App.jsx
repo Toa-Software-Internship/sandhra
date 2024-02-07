@@ -61,7 +61,6 @@ function App() {
       //inorder to set the data retrieved into data
       setData(lotData)
       console.log(data)
-
     })
     .catch(error =>console.error ("The error is:",error))
   }
@@ -89,11 +88,10 @@ function App() {
       </div>
       <div className='table-size'>
         <center>
-        <BasicTable/>
-
+        {data && <BasicTable data = {data}/>}
         </center>
+        </div>
         
-      </div>
       <BottomNavigation/>
   
     </div>
