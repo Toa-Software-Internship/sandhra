@@ -63,7 +63,7 @@ function App() {
       console.log(data)
 
     })
-    
+    .catch(error =>console.error ("The error is:",error))
   }
 
   return (
