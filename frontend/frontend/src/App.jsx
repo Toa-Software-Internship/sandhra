@@ -14,8 +14,8 @@ function App() {
   //lot options
   const [lotOptions,setLotOptions] = useState([]);
   //selection lot
-  const[selectedLot,setSelectedLot]= useState([]);
-  //data lot
+  const[selectedLot,setSelectedLot]= useState("");
+  //data
   const[data,setData]= useState([]);
 
 //For Lots listing
@@ -23,37 +23,28 @@ function App() {
     axios
     .get("http://localhost:8000/lot/")
     .then((response)=>{
-      setLotOptions(response.data.data[0])
-      // console.log(lotOptions);
+      //lotdata creation
+      const lotdata=response.data.data[0]
+      const options= lotdata.map((lot)=>(
+        {
+          label:lot.name,
+          value:lot.id
+        }
+      )
+      )
+      setLotOptions(options)
+      //console.log(lotOptions);
     })
+    .catch(error => console.error("The error is:",error))
   })
 
 
-  //for selection of Lot
-  // useEffect(()=>{
-  //   axios
-  //   .get("http://localhost:8000/lot/label/")
-  //   .then((response)=>{
-  //     setSelectedLot(response.data.data[0])
-  //     console.log(selectedLot);
-  //   })
-  // })
 
   // for data retrieval
   useEffect(()=>{
     
   })
 
-//Just for checking how get works when a particular LotID is given 
-// useEffect(()=>{
-//   axios
-//   .get("http://localhost:8000/lot/65bb48d6961c0a1f3a5e170e")
-//   .then((response)=>{
-//     console.log(response.data.data);
-//     setLotOptions(response.data.data)
-//   })
-  
-// })
 
   const handleSubmit =(e)=>{
     e.preventDefault();
