@@ -51,25 +51,31 @@ function App() {
   }
 
 
-  const handleSubmit =(e)=>{
+  // const handleSubmit =(e)=>{
+  //   e.preventDefault();
+  //   console.log("ButtonClicked");
+  //   console.log(selectedLot.id)
+  //   axios
+  //   .get(`http://localhost:8000/data/lotdata/${selectedLot.id}/`)
+  //   .then((response)=>{
+  //     setData(response.data)@
+  //     console.log(data);
+  //   })
+  // }
+
+
+  const handleButtonClick=(e) =>{
     e.preventDefault();
-    console.log("ButtonClicked");
-    console.log(selectedLot.id)
     axios
-    .get(`http://localhost:8000/data/lotdata/${selectedLot.id}/`)
+    .get(`http://localhost:8000/data/lotdata/${selectedLot}/`)
     .then((response)=>{
       setData(response.data)
-      console.log(data);
+
     })
-  }
-
-
-  const handChange=(e) =>{
-    e.preventDefault();
-    console.log(e.target.key)
-    setSelectedLot({
-      id:e.target.key
-    });
+    // // console.log(e.target.key)
+    // setSelectedLot({
+    //   id:e.target.key
+    // });
   }
 
   return (
@@ -86,7 +92,10 @@ function App() {
         onChange={handleLotChange}
         options={lotOptions}
         />
-        <Button className="submit-button" text="SUBMIT" handleChange={handleSubmit}/>
+        <Button 
+        className="submit-button" 
+        text="SUBMIT" 
+        handleSubmit={handleButtonClick}/>
 
       </div>
       <div className='table-size'>
