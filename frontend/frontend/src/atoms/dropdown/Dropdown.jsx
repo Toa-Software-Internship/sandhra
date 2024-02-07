@@ -8,13 +8,19 @@ import FormControl from '@mui/material/FormControl';
 
 
 
-const Dropdown = (options, handleChange) => {
+const Dropdown = ({options,onChange,value}) => {
   //for lot listing
   // console.log(options.options)
 
 
+const handleChange=(e)=>{
+  const selectedValue = e.target.value;
+  onChange(selectedValue)
+  console.log(selectedValue)
 
-  return (
+}
+  
+    return (
     <div>
       <Box sx={{borderBottom:0}}>
      
@@ -25,17 +31,19 @@ const Dropdown = (options, handleChange) => {
         <Select 
         sx={{fontWeight:"regular",border:"0",height:"53px",width:"563px",backgroundColor:'#BACD9B',fontFamily: 'Inter',fontSize:30,'&:before': {borderBottom: 'none'} }}
         labelId="demo-simple-select-label"
+        value={value}
         id="demo-simple-select"
         onChange={handleChange}
         label="SELECT FIELD/LOT"
         >
           {
-
-          options.options.map((item=>
-            <MenuItem key={item.id} value={item.name} >
+          options.map(item=>{
+            <MenuItem 
+            key={item.value} 
+            value={item.value} >
               
-              {item.name}
-            </MenuItem>))
+              {item.label}
+            </MenuItem>})
         
         }
                 
